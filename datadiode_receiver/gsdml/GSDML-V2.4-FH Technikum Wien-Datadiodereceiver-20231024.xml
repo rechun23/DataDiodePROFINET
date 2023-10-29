@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.4.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x0493" DeviceID="0x0002">
+			<InfoText TextId="ID_TEXT_DEVICE_INFO" />
+			<VendorName Value="FH Technikum Wien" />
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="I/O" ProductFamily="datadiode" />
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="IDD_1" PNIO_Version="V2.4" PhysicalSlots="0..7" ModuleIdentNumber="0x00000001" MinDeviceInterval="256" DNS_CompatibleName="datadiodereceiver" FixedInSlots="0" ObjectUUID_LocalIndex="1" DeviceAccessSupported="false" MultipleWriteSupported="true" CheckDeviceID_Allowed="true" NameOfStationNotTransferable="false" LLDP_NoD_Supported="true" ResetToFactoryModes="1..2">
+					<ModuleInfo>
+						<Name TextId="ID_TEXT_DEVICE_NAME" />
+						<InfoText TextId="ID_TEXT_DEVICE_INFO" />
+						<VendorName Value="FH Technikum Wien" />
+						<OrderNumber Value="123 444 777" />
+						<HardwareRelease Value="A1.0" />
+						<SoftwareRelease Value="V0.1.0" />
+					</ModuleInfo>
+					<CertificationInfo NetloadClass="I" ApplicationClass="" ConformanceClass="B" />
+					<IOConfigData MaxOutputLength="244" MaxInputLength="244" />
+					<UseableModules>
+						<ModuleItemRef FixedInSlots="1" ModuleItemTarget="ID_MODULE64" />
+						<ModuleItemRef AllowedInSlots="1..7" ModuleItemTarget="ID_MODULE65" />
+						<ModuleItemRef AllowedInSlots="1..7" ModuleItemTarget="ID_MODULE66" />
+						<ModuleItemRef AllowedInSlots="1..7" ModuleItemTarget="ID_MODULE67" />
+						<ModuleItemRef AllowedInSlots="1..7" ModuleItemTarget="ID_MODULE68" />
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_1" MayIssueProcessAlarm="false" Writeable_IM_Records="1 2 3" SubmoduleIdentNumber="0x00000001">
+							<IOData />
+							<ModuleInfo>
+								<Name TextId="ID_TEXT_DEVICE_NAME" />
+								<InfoText TextId="ID_TEXT_DEVICE_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem TextId="ID_TEXT_NETIF1_NAME" ID="IDS_I" SubmoduleIdentNumber="0x00008000" DCP_BoundarySupported="true" PTP_BoundarySupported="true" NetworkComponentDiagnosisSupported="false" SupportedProtocols="SNMP;LLDP" SupportedRT_Classes="RT_CLASS_1" SubslotNumber="32768">
+							<ApplicationRelations StartupMode="Advanced">
+								<TimingProperties ReductionRatio="1 2 4 8 16 32 64 128 256 512" SendClock="32" />
+							</ApplicationRelations>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem TextId="ID_TEXT_NETIF1_PORT1" ID="IDS_P1" SubmoduleIdentNumber="0x00008001" SubslotNumber="32769" MaxPortTxDelay="160" MaxPortRxDelay="350">
+							<MAUTypeList>
+								<MAUTypeItem Value="30" />
+								<MAUTypeItem Value="16" />
+								<MAUTypeItem Value="5" />
+							</MAUTypeList>
+						</PortSubmoduleItem>
+					</SystemDefinedSubmoduleList>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<ModuleItem ModuleIdentNumber="0x00000040" ID="ID_MODULE64">
+					<ModuleInfo>
+						<Name TextId="ID_TEXT_MODULE64_NAME" />
+						<InfoText TextId="ID_TEXT_MODULE64_INFOTEXT" />
+						<HardwareRelease Value="1.0" />
+						<SoftwareRelease Value="1.0" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDSM320" MayIssueProcessAlarm="true" SubmoduleIdentNumber="0x00000140" FixedInSubslots="1">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem TextId="ID_TEXT_SUBMODULE320_INPUT1" DataType="Unsigned16" />
+								</Input>
+							</IOData>
+							<RecordDataList />
+							<ModuleInfo>
+								<Name TextId="ID_TEXT_SUBMODULE320_NAME" />
+								<InfoText TextId="ID_TEXT_SUBMODULE320_INFOTEXT" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ModuleIdentNumber="0x00000041" ID="ID_MODULE65">
+					<ModuleInfo>
+						<Name TextId="ID_TEXT_MODULE65_NAME" />
+						<InfoText TextId="ID_TEXT_MODULE65_INFOTEXT" />
+						<HardwareRelease Value="1.0" />
+						<SoftwareRelease Value="1.0" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDSM321" MayIssueProcessAlarm="true" SubmoduleIdentNumber="0x00000141" FixedInSubslots="1">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem TextId="ID_TEXT_SUBMODULE321_INPUT1" DataType="Unsigned16" />
+								</Input>
+							</IOData>
+							<RecordDataList />
+							<ModuleInfo>
+								<Name TextId="ID_TEXT_SUBMODULE321_NAME" />
+								<InfoText TextId="ID_TEXT_SUBMODULE321_INFOTEXT" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ModuleIdentNumber="0x00000042" ID="ID_MODULE66">
+					<ModuleInfo>
+						<Name TextId="ID_TEXT_MODULE66_NAME" />
+						<InfoText TextId="ID_TEXT_MODULE66_INFOTEXT" />
+						<HardwareRelease Value="1.0" />
+						<SoftwareRelease Value="1.0" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDSM322" MayIssueProcessAlarm="true" SubmoduleIdentNumber="0x00000142" FixedInSubslots="1">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem TextId="ID_TEXT_SUBMODULE322_INPUT1" DataType="Unsigned16" />
+								</Input>
+							</IOData>
+							<RecordDataList />
+							<ModuleInfo>
+								<Name TextId="ID_TEXT_SUBMODULE322_NAME" />
+								<InfoText TextId="ID_TEXT_SUBMODULE322_INFOTEXT" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ModuleIdentNumber="0x00000043" ID="ID_MODULE67">
+					<ModuleInfo>
+						<Name TextId="ID_TEXT_MODULE67_NAME" />
+						<InfoText TextId="ID_TEXT_MODULE67_INFOTEXT" />
+						<HardwareRelease Value="1.0" />
+						<SoftwareRelease Value="1.0" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDSM323" MayIssueProcessAlarm="true" SubmoduleIdentNumber="0x00000143" FixedInSubslots="1">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem TextId="ID_TEXT_SUBMODULE323_INPUT1" DataType="Float32" />
+								</Input>
+							</IOData>
+							<RecordDataList />
+							<ModuleInfo>
+								<Name TextId="ID_TEXT_SUBMODULE323_NAME" />
+								<InfoText TextId="ID_TEXT_SUBMODULE323_INFOTEXT" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ModuleIdentNumber="0x00000044" ID="ID_MODULE68">
+					<ModuleInfo>
+						<Name TextId="ID_TEXT_MODULE68_NAME" />
+						<InfoText TextId="ID_TEXT_MODULE68_INFOTEXT" />
+						<HardwareRelease Value="1.0" />
+						<SoftwareRelease Value="1.0" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDSM324" MayIssueProcessAlarm="true" SubmoduleIdentNumber="0x00000144" FixedInSubslots="1">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem TextId="ID_TEXT_SUBMODULE324_INPUT1" DataType="Float32" />
+								</Input>
+							</IOData>
+							<RecordDataList />
+							<ModuleInfo>
+								<Name TextId="ID_TEXT_SUBMODULE324_NAME" />
+								<InfoText TextId="ID_TEXT_SUBMODULE324_INFOTEXT" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+			</ModuleList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<Text TextId="ID_TEXT_DEVICE_INFO" Value="Simulate profinet modul receiver which is part of a data diode" />
+					<Text TextId="ID_TEXT_DEVICE_NAME" Value="Datadiodereceiver" />
+					<Text TextId="ID_TEXT_MODULE64_INFOTEXT" Value="Modul for Status signals" />
+					<Text TextId="ID_TEXT_MODULE64_NAME" Value="Status module" />
+					<Text TextId="ID_TEXT_MODULE65_INFOTEXT" Value="Module for Temperature threshold" />
+					<Text TextId="ID_TEXT_MODULE65_NAME" Value="Temperature Module" />
+					<Text TextId="ID_TEXT_MODULE66_INFOTEXT" Value="Module for Tank level" />
+					<Text TextId="ID_TEXT_MODULE66_NAME" Value="Tank Module" />
+					<Text TextId="ID_TEXT_MODULE67_INFOTEXT" Value="For Flow rate threshold" />
+					<Text TextId="ID_TEXT_MODULE67_NAME" Value="Flow rate Module" />
+					<Text TextId="ID_TEXT_MODULE68_INFOTEXT" Value="For pressure threshold" />
+					<Text TextId="ID_TEXT_MODULE68_NAME" Value="Pressure Module" />
+					<Text TextId="ID_TEXT_NETIF1_NAME" Value="X1" />
+					<Text TextId="ID_TEXT_NETIF1_PORT1" Value="X1 P1" />
+					<Text TextId="ID_TEXT_SUBMODULE320_INFOTEXT" Value="Signal if there is a problem in processings station" />
+					<Text TextId="ID_TEXT_SUBMODULE320_INPUT1" Value="no description available" />
+					<Text TextId="ID_TEXT_SUBMODULE320_NAME" Value="Status Submodule" />
+					<Text TextId="ID_TEXT_SUBMODULE321_INFOTEXT" Value="For general temperature control purpose" />
+					<Text TextId="ID_TEXT_SUBMODULE321_INPUT1" Value="no description available" />
+					<Text TextId="ID_TEXT_SUBMODULE321_NAME" Value="Temperature submodule" />
+					<Text TextId="ID_TEXT_SUBMODULE322_INFOTEXT" Value="Submodul for tank level" />
+					<Text TextId="ID_TEXT_SUBMODULE322_INPUT1" Value="no description available" />
+					<Text TextId="ID_TEXT_SUBMODULE322_NAME" Value="tank submodule" />
+					<Text TextId="ID_TEXT_SUBMODULE323_INFOTEXT" Value="Submodul for flow rate" />
+					<Text TextId="ID_TEXT_SUBMODULE323_INPUT1" Value="no description available" />
+					<Text TextId="ID_TEXT_SUBMODULE323_NAME" Value="Flow rate Submodule" />
+					<Text TextId="ID_TEXT_SUBMODULE324_INFOTEXT" Value="Submodul for presure" />
+					<Text TextId="ID_TEXT_SUBMODULE324_INPUT1" Value="no description available" />
+					<Text TextId="ID_TEXT_SUBMODULE324_NAME" Value="Pressure Submodule" />
+				</PrimaryLanguage>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>
