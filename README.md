@@ -14,6 +14,19 @@ This project relies on the following dependencies for seamless operation:
 
 Follow the installation instructions in the Profipp repository.
 
+1. **pigpio:** Pigpio is responsible for I2C communication and GPIO handling on the Raspberry Pi. Find the required repository [here](https://github.com/joan2937/pigpio).
+
+    ```bash
+    sudo apt-get update
+    sudo apt-get install pigpio
+
+Ensure pigpio is running as a daemon:
+    ```bash
+    sudo pigpiod
+
+For more information, refer to the pigpio [documentation](http://abyz.me.uk/rpi/pigpio/).
+
+These dependencies must be installed and configured before running the Data Diode PROFINET system. Make sure to follow the respective documentation for each dependency to ensure a smooth setup process.
 ## Hardware
 
 
