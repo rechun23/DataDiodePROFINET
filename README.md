@@ -22,7 +22,6 @@ Follow the installation instructions in the Profipp repository.
 
 Ensure pigpio is running as a daemon:
     
-    ```bash
     sudo pigpiod
 
 For more information, refer to the pigpio [documentation](http://abyz.me.uk/rpi/pigpio/).
@@ -53,8 +52,8 @@ These dependencies must be installed and configured before running the Data Diod
 
 ### PLC
 1. Install the GSDML file using the GSD Importer in TIA Portal:
-    - For Receiver: Import GSDML into `datadiode_receiver/gsdml`
-    - For Sender: Import GSDML into `datadiode_sender/gsdml`
+    - For Receiver: Import GSDML from `datadiode_receiver/gsdml`
+    - For Sender: Import GSDML from `datadiode_sender/gsdml`
 
 2. Access the sample TIA project:
     - For Receiver: Navigate to `datadiode_receiver/resources`
